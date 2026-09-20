@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 705" preserveAspectRatio="xMidYMid slice" fill="none">
+	<defs>
+		<linearGradient id="bg" x1="0" y1="0" x2="0.3" y2="1">
+			<stop offset="0" stop-color="#4a1d2b"/>
+			<stop offset=".55" stop-color="#7c3a4b"/>
+			<stop offset="1" stop-color="#2a0f18"/>
+		</linearGradient>
+		<radialGradient id="glow" cx=".5" cy=".5" r=".5">
+			<stop offset="0" stop-color="#f3d9ac" stop-opacity=".9"/>
+			<stop offset=".55" stop-color="#eec38a" stop-opacity=".28"/>
+			<stop offset="1" stop-color="#eec38a" stop-opacity="0"/>
+		</radialGradient>
+		<linearGradient id="veil" x1="0" y1="0" x2="1" y2="0">
+			<stop offset="0" stop-color="#000" stop-opacity="0"/>
+			<stop offset="1" stop-color="#000" stop-opacity=".35"/>
+		</linearGradient>
+	</defs>
+	<rect width="1200" height="705" fill="url(#bg)"/>
+	<g stroke="#f7d9a3" stroke-opacity=".3" stroke-width="2">
+		<line x1="672" y1="186" x2="672" y2="518"/><line x1="466" y1="352" x2="878" y2="352"/>
+		<line x1="814" y1="240" x2="945" y2="120"/><line x1="530" y1="464" x2="399" y2="584"/>
+	</g>
+	<circle cx="672" cy="352" r="186" fill="url(#glow)"/>
+	<circle cx="672" cy="352" r="160" stroke="#f0c78b" stroke-opacity=".22" stroke-width="1"/>
+
+	<g fill="#f0c29d">
+		<path d="M560 330c-4-34-30-58-66-58-38 0-66 26-68 62-34 4-58 30-56 64 2 36 30 60 66 60h-6c30 0 54-18 62-44 3-12 8-22 16-30 10-9 20-22 24-38 4-10 8-16 28-16Z"/>
+		<path d="M560 330c4-34 30-58 66-58 38 0 66 26 68 62 34 4 58 30 56 64-2 36-30 60-66 60h6c-30 0-54-18-62-44-3-12-8-22-16-30-10-9-20-22-24-38-4-10-8-16-28-16Z"/>
+		<path d="M494 392c-8 2-16 1-22-3 14 44 52 74 100 74s86-30 100-74c-6 4-14 5-22 3 6-18 4-38-6-52-8 2-14 0-18-4-6 10-12 15-22 16-10 2-18-1-24-8-8 6-16 9-25 9-6 0-12-2-18-6-10 14-14 33-10 51Z"/>
+	</g>
+	<g stroke="#d99e72" stroke-opacity=".8" stroke-width="2">
+		<path d="M506 280c10 8 22 12 36 12"/>
+		<path d="M802 280c-10 8-22 12-36 12"/>
+	</g>
+
+	<g fill="#f9e4bb">
+		<circle cx="672" cy="352" r="8"/><circle cx="672" cy="352" r="126" stroke="#f7dca8" stroke-opacity=".5" stroke-width="1.5" fill="none"/><circle cx="672" cy="352" r="84" stroke="#f9e4bb" stroke-opacity=".35" stroke-width="1" fill="none"/>
+		<circle cx="444" cy="180" r="3" opacity=".75"/><circle cx="900" cy="180" r="3" opacity=".75"/><circle cx="444" cy="524" r="3" opacity=".75"/><circle cx="900" cy="524" r="3" opacity=".75"/>
+	</g>
+	<rect width="1200" height="705" fill="url(#veil)"/>
+</svg>
