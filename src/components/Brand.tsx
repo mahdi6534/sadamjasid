@@ -19,7 +19,7 @@ export function Lotus({ className = '', ...props }: SVGProps<SVGSVGElement>) {
 export function Brand({ light = false, compact = false }: { light?: boolean; compact?: boolean }) {
   return (
     <a className={`brand${light ? ' brand-light' : ''}${compact ? ' brand-compact' : ''}`} href="#home" aria-label="درة المساج والتدليك الرياضي، العودة للرئيسية">
-      <Lotus className="brand-mark" />
+      <img className="brand-mark" src="/images/logo.webp" alt="" width="55" height="56" />
       <span className="brand-type">
         <span className="brand-name">درة المساج</span>{' '}
         <span className="brand-description">والتدليك الرياضي</span>

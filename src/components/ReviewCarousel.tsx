@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import { useInView, useReducedMotion } from 'motion/react';
 import { ArrowUpLeft, ChevronLeft, ChevronRight, Pause, Play, Star } from 'lucide-react';
-import { googleReviewsUrl, reviews } from '../data';
+import { googleReviewsUrl } from '../data';
+import reviews from '../../reviews.json';
 import { GoogleIcon } from './Brand';
 
 export function Stars() {

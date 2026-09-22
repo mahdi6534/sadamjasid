@@ -37,7 +37,7 @@ export const services: Service[] = [
     popular: true,
     ribbon: '120 ألف طلب خلال عام',
     description: 'افصل عن زحمة يومك بساعة من الراحة الشاملة.',
-    image: '/images/royal-60.svg',
+    image: '/images/firstimage.webp',
     includes: ['جلسة مساج ملكي شامل لمدة ساعة', 'تدليك كامل الجسم للمساعدة على تخفيف الشد والاسترخاء'],
   },
   {
@@ -230,44 +230,6 @@ export function branchWhatsappLink(phone: string, service?: Service) {
   return `https://wa.me/${international}?text=${encodeURIComponent(whatsappMessage('branches', service))}`;
 }
 
-// These are excerpts transcribed from the supplied screenshots, not a live review feed.
-export const reviews = [
-  {
-    name: 'سعيد الغامدي',
-    initial: 'س',
-    color: '#758071',
-    meta: 'مرشد محلي · 21 مراجعة',
-    text: 'مكان جميل ونظيف وأيادي ماهرة. سويت مساج وتنظيف معا حبيب الهندي ممتاز و شغله رائع. يستحق الزيارة ...',
-  },
-  {
-    name: 'Mohmmad Hashem',
-    initial: 'M',
-    color: '#8e826b',
-    meta: 'مرشد محلي · 145 مراجعة · 15 صورة',
-    text: 'ماشاء الله مكان نظيف ويفتح النفس جيت وعندي الم بالظهر شديد وفيه اندونيسي اسمه هاني بصراحه الله يعطيه العافيه حسيت براحه وفعلا خبره شكرا من القلب واتمنى لكم التوفيق ...',
-  },
-  {
-    name: 'Ali Bilqasab',
-    initial: 'A',
-    color: '#32659a',
-    meta: 'مرشد محلي · 44 مراجعة · 73 صورة',
-    text: 'Mezan at the reception was very friendly and helpful, and Anwar the Masseur was the best I have had in Riyadh so far. I would greatly recommend it. بدون مبالغة أفضل مكان في رياض، نظيف ومريح',
-  },
-  {
-    name: 'ابوفيصل التميمي',
-    initial: 'ا',
-    color: '#6c70b6',
-    meta: 'مرشد محلي · 26 مراجعة · 8 صور',
-    text: 'بسم الله اولا احب اشكر الادارة المشرفة على الاهتمام و طلب طاقم متخصص للمساج والتدليك بعنايه فائقه جدا جدا احب اشكر مستر كارلو ذو خبره عميقه في المجال الدليك والاسترخاء .. لاخواني الرياضيين اللي يواجه مشكله في العضلات او بعض المشاكل الجسم انصحكم بتجربه مستر ( كارلو ) خبره اكثر من 14 عام ولا انسى طيب الاستاذ محمود على الاستقبال والكلام الجميل. تقييم اعطيهم 10/10',
-  },
-  {
-    name: 'Mohmmed - M',
-    initial: 'M',
-    color: '#667264',
-    meta: 'مرشد محلي · 32 مراجعة · 140 صورة',
-    text: 'ما شاء الله تبارك الله أفضل مكان ممكن تروح له عشان تسوي مساج، جد والله مساج علاجي واسترخاء بمعنى الكلمه المكان جميل والنظافة عاليه جداً والغرف كل وحده افضل من الثانيه تعامل موظف الاستقبال راقي ومحترم واخصائي المساج / عمر ما شاء الله تبارك ...',
-  },
-];
 
 const embedPrefix = 'https://www.google.com/maps/embed?pb=';
 
