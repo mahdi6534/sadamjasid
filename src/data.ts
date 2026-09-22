@@ -37,7 +37,7 @@ export const services: Service[] = [
     popular: true,
     ribbon: '120 ألف طلب خلال عام',
     description: 'افصل عن زحمة يومك بساعة من الراحة الشاملة.',
-    image: '/images/firstimage.webp',
+    image: '/images/المساج الملكي الشامل ساعه.webp',
     includes: ['جلسة مساج ملكي شامل لمدة ساعة', 'تدليك كامل الجسم للمساعدة على تخفيف الشد والاسترخاء'],
   },
   {
@@ -47,7 +47,7 @@ export const services: Service[] = [
     duration: 'ساعتين',
     vip: true,
     description: 'ساعتان من الاسترخاء لتخفيف الشد وإراحة جسمك.',
-    image: '/images/royal-120.svg',
+    image: '/images/المساج الملكي الشامل 2 ساعه.webp',
     includes: ['جلسة مساج ملكي شامل لمدة ساعتين', 'تدليك الجسم والتركيز على مناطق الشد حسب احتياجك'],
   },
   {
@@ -56,7 +56,7 @@ export const services: Service[] = [
     name: 'المساج الملكي الشامل',
     duration: 'ساعة ونصف',
     description: 'وقت أطول لعضلات مرتاحة وذهن أصفى.',
-    image: '/images/royal-90.svg',
+    image: '/images/المساج الملكي الشامل ساعه ونصف.webp',
     includes: ['جلسة مساج ملكي شامل لمدة ساعة ونصف', 'تدليك الجسم للمساعدة على الاسترخاء وتخفيف التوتر العضلي'],
   },
   {
@@ -64,7 +64,7 @@ export const services: Service[] = [
     category: 'massage',
     name: 'المساج التايلندي',
     description: 'تمدد وضغط مدروس لمرونة أفضل وعضلات أخف.',
-    image: '/images/thai.svg',
+    image: '/images/مساج تايلندي.webp',
     includes: ['تقنيات تدليك تايلندي تجمع الضغط والتمدد', 'تكييف شدة الجلسة مع راحتك، بالتنسيق مع الأخصائي'],
   },
   {
@@ -72,7 +72,7 @@ export const services: Service[] = [
     category: 'massage',
     name: 'مساج الأحجار الساخنة',
     description: 'دفء الأحجار يساعد على إرخاء العضلات المشدودة.',
-    image: '/images/hot-stone.svg',
+    image: '/images/مساج الاحجار الساخنه.webp',
     includes: ['تدليك باستخدام أحجار ملساء دافئة', 'دفء وضغط لطيف للمساعدة على استرخاء العضلات'],
   },
   {
@@ -80,7 +80,7 @@ export const services: Service[] = [
     category: 'massage',
     name: 'مساج رفلكسلوجي',
     description: 'عناية بنقاط القدمين لراحة بعد طول الوقوف.',
-    image: '/images/reflexology.svg',
+    image: '/images/مساج رفلكسولجي.webp',
     includes: ['ضغط مدروس على نقاط القدمين', 'جلسة تركز على الراحة والاسترخاء بعد إجهاد اليوم'],
   },
   {
@@ -88,7 +88,7 @@ export const services: Service[] = [
     category: 'massage',
     name: 'مساج الشياتسو',
     description: 'ضغط إيقاعي بالأصابع يهدئ التوتر وشد الجسم.',
-    image: '/images/shiatsu.svg',
+    image: '/images/مساج الشياتسو.webp',
     includes: ['تدليك بتقنيات الضغط الإيقاعي بالأصابع', 'التركيز على الاسترخاء وتخفيف التوتر العضلي'],
   },
   {
@@ -97,7 +97,7 @@ export const services: Service[] = [
     name: 'الحمام المغربي الملكي الشامل',
     vip: true,
     description: 'تنظيف وتقشير شامل، مع عناية بالوجه والشعر.',
-    image: '/images/royal-hammam.svg',
+    image: '/images/الحمام المغربي الملكي الشامل.webp',
     includes: [
       'الصابون البلدي والأعشاب المغربية الطبيعية',
       'طين البحر الميت المعدني وصنفرة الجسم',
@@ -111,7 +111,7 @@ export const services: Service[] = [
     category: 'hammam',
     name: 'حمام صنفرة الجسم',
     description: 'صابون بلدي وتقشير كامل لبشرة أنعم وأنظف.',
-    image: '/images/body-scrub.svg',
+    image: '/images/حمام صنفرة الجسم.webp',
     includes: ['تنظيف الجسم بالصابون البلدي المغربي', 'صنفرة كاملة لإزالة الجلد الميت وتنعيم البشرة'],
   },
   {
@@ -119,7 +119,7 @@ export const services: Service[] = [
     category: 'hammam',
     name: 'حمام طين البحر الميت',
     description: 'صابون مغربي وطين معدني لنظافة وانتعاش البشرة.',
-    image: '/images/dead-sea.svg',
+    image: '/images/حمام طين البحر الميت.webp',
     includes: ['تنظيف الجسم بالصابون البلدي المغربي', 'طين البحر الميت المعدني على كامل الجسم'],
   },
   {
@@ -127,7 +127,7 @@ export const services: Service[] = [
     category: 'hammam',
     name: 'حمام الأعشاب المغربية',
     description: 'أعشاب طبيعية وصابون بلدي لانتعاش معطر.',
-    image: '/images/herbal-hammam.svg',
+    image: '/images/حمام الأعشاب المغربية.webp',
     includes: ['تنظيف بالصابون المغربي الطبيعي', 'خليط أعشاب مغربية مثل الورد والخزامى والريحان مع الغسول'],
   },
   {
@@ -135,7 +135,7 @@ export const services: Service[] = [
     category: 'hammam',
     name: 'الحمام المغربي بالصابون البلدي',
     description: 'بخار وصابون بلدي لتنظيف البشرة وإزالة الجلد الميت.',
-    image: '/images/beldi-hammam.svg',
+    image: '/images/الحمام المغربي بالصابون البلدي.webp',
     includes: ['تهيئة الجسم في غرفة البخار', 'تنظيف كامل الجسم بالصابون البلدي المغربي'],
   },
   {
@@ -144,7 +144,7 @@ export const services: Service[] = [
     name: 'الباقة الملكية الخاصة للعرسان',
     vip: true,
     description: 'مساج وبودي كير وحمام مغربي وجاكوزي ليومك الكبير.',
-    image: '/images/groom-vip.svg',
+    image: '/images/الباقة الملكية الخاصة للعرسان.webp',
     includes: ['مساج ملكي شامل', 'بودي كير للعناية بالجسم', 'حمام مغربي', 'جاكوزي'],
   },
   {
@@ -153,7 +153,7 @@ export const services: Service[] = [
     name: 'المساج الملكي + الحمام الملكي',
     vip: true,
     description: 'راحة لعضلاتك ونظافة لبشرتك في تجربة واحدة.',
-    image: '/images/royal-duo.svg',
+    image: '/images/المساج الملكي + الحمام الملكي.webp',
     includes: ['المساج الملكي VIP', 'الحمام المغربي الملكي VIP'],
   },
   {
@@ -162,7 +162,7 @@ export const services: Service[] = [
     name: 'المساج الملكي + البديكير',
     vip: true,
     description: 'مساج شامل مع عناية مرتبة لليدين والقدمين.',
-    image: '/images/royal-pedicure.svg',
+    image: '/images/المساج الملكي + البديكير.webp',
     includes: ['المساج الملكي VIP', 'بديكير اليدين والقدمين'],
   },
   {
@@ -170,7 +170,7 @@ export const services: Service[] = [
     category: 'special',
     name: 'المساج التايلندي + الحمام المغربي',
     description: 'مرونة واسترخاء، مع حمام أعشاب أو طين معدني.',
-    image: '/images/thai-hammam.svg',
+    image: '/images/المساج التايلندي + الحمام المغربي.webp',
     includes: ['جلسة مساج تايلندي', 'اختيارك من حمام الأعشاب المغربية أو حمام طين البحر الميت'],
   },
   {
@@ -179,7 +179,7 @@ export const services: Service[] = [
     name: 'بدكير اليدين والقدمين',
     popular: true,
     description: 'دلل نفسك بأظافر صحية وجميلة، في درة المساج أفضل مركز مساج في الرياض.',
-    image: '/images/pedicure-classic.svg',
+    image: '/images/بدكير اليدين والقدمين.webp',
     includes: ['تقديم خدمة تقليم الأظافر بأعلى جودة', 'باستخدام أفضل الأدوات والتقنيات في جميع فروع درة المساج'],
   },
   {
@@ -187,7 +187,7 @@ export const services: Service[] = [
     category: 'pedicure',
     name: 'بدكير القدمين',
     description: 'قص اظافر وسنفرة وتقشير الجلد الميت.',
-    image: '/images/pedicure-feet.svg',
+    image: '/images/بدكير القدمين.webp',
     includes: ['قص أظافر القدمين', 'سنفرة وتقشير الجلد الميت'],
   },
   {
@@ -195,7 +195,7 @@ export const services: Service[] = [
     category: 'pedicure',
     name: 'بدكير اليدين',
     description: 'تقليم اظافر الايدي وسنفرتها وتنظيفه.',
-    image: '/images/pedicure-hands.svg',
+    image: '/images/بدكير اليدين.webp',
     includes: ['تقليم أظافر اليدين', 'سنفرة وتنظيف الأظافر'],
   },
   {
@@ -203,7 +203,7 @@ export const services: Service[] = [
     category: 'pedicure',
     name: 'جاكوزي',
     description: 'استمتع بتجربة استرخاء لا مثيل لها مع أفضل جاكوزي في الرياض. دلل نفسك بتجربة استرخاء مميزة في جميع فروع درة المساج في الرياض مع خدمة الجاكوزي الفاخرة.',
-    image: '/images/jacuzzi.svg',
+    image: '/images/جاكوزي.webp',
     includes: ['تجربة استرخاء مميزة في جميع فروع درة المساج في الرياض', 'خدمة الجاكوزي الفاخرة'],
   },
 ];
