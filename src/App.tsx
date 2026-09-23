@@ -4,7 +4,7 @@ import {
   ArrowDown, ArrowLeft, ArrowUp, ArrowUpLeft, Check,
   Clock3, Crown, House, MapPin, Menu, Navigation, Phone, Sparkles, X,
 } from 'lucide-react';
-import { Brand, GoogleIcon, Lotus, WhatsAppIcon } from './components/Brand';
+import { Brand, GoogleIcon, WhatsAppIcon } from './components/Brand';
 import DelayedCallPrompt from './components/DelayedCallPrompt';
 import ReviewCarousel from './components/ReviewCarousel';
 import {
@@ -220,7 +220,7 @@ function LandingPage() {
         <div className="footer-bottom"><p>© {new Date().getFullYear()} درة المساج والتدليك الرياضي. جميع الحقوق محفوظة.</p><span className="photo-note">الصور لأغراض توضيحية</span><a href="#home">العودة للأعلى <ArrowUp size={15} /></a></div>
       </div></footer>
 
-      <nav className="booking-dock" aria-label="الحجز السريع الثابت"><div className="container dock-inner"><div className="dock-caption"><Lotus /><div><strong>حان وقت راحتك</strong><span>حجزك أقرب مما تتخيل</span></div><ArrowLeft size={20} /></div><BookingActions variant="dock" /></div></nav>
+      <nav className="booking-dock" aria-label="الحجز السريع الثابت"><div className="container dock-inner"><div className="dock-caption"><img className="dock-mark" src="/images/logo.png" alt="" width="68" height="70" /><div><strong>حان وقت راحتك</strong><span>حجزك أقرب مما تتخيل</span></div><ArrowLeft size={20} /></div><BookingActions variant="dock" /></div></nav>
       <DelayedCallPrompt />
     </div>
   );
