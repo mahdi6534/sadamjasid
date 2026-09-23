@@ -153,7 +153,7 @@ export const services: Service[] = [
     name: 'المساج الملكي + الحمام الملكي',
     vip: true,
     description: 'راحة لعضلاتك ونظافة لبشرتك في تجربة واحدة.',
-    image: '/images/المساج الملكي + الحمام الملكي.webp',
+    image: '/images/المساج الملكي والحمام الملكي.webp',
     includes: ['المساج الملكي VIP', 'الحمام المغربي الملكي VIP'],
   },
   {
@@ -162,7 +162,7 @@ export const services: Service[] = [
     name: 'المساج الملكي + البديكير',
     vip: true,
     description: 'مساج شامل مع عناية مرتبة لليدين والقدمين.',
-    image: '/images/المساج الملكي + البديكير.webp',
+    image: '/images/المساج الملكي والبديكير.webp',
     includes: ['المساج الملكي VIP', 'بديكير اليدين والقدمين'],
   },
   {
@@ -170,7 +170,7 @@ export const services: Service[] = [
     category: 'special',
     name: 'المساج التايلندي + الحمام المغربي',
     description: 'مرونة واسترخاء، مع حمام أعشاب أو طين معدني.',
-    image: '/images/المساج التايلندي + الحمام المغربي.webp',
+    image: '/images/المساج التايلندي والحمام المغربي.webp',
     includes: ['جلسة مساج تايلندي', 'اختيارك من حمام الأعشاب المغربية أو حمام طين البحر الميت'],
   },
   {
