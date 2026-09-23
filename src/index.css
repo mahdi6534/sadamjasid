@@ -213,6 +213,7 @@ button:focus-visible, a:focus-visible, [tabindex="0"]:focus-visible { outline: 2
 .google-reviews-link { display: inline-flex; align-items: center; gap: 13px; padding-block: 10px; font-size: 14px; line-height: 1.7; color: #665f50; }
 .google-reviews-link small { display: flex; align-items: center; gap: 6px; color: #9a907e; font-size: 12px; margin-top: 4px; }
 .reviews-viewport { --review-count: 3; display: flex; align-items: stretch; column-gap: 24px; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scrollbar-width: none; padding-block: 2px; -webkit-overflow-scrolling: touch; direction: rtl; }
+.reviews-viewport.is-gliding { scroll-snap-type: none; }
 .reviews-viewport::-webkit-scrollbar { display: none; }
 .review-card { display: flex; flex-direction: column; width: calc((100% - 48px) / 3); flex-shrink: 0; scroll-snap-align: start; padding: 25px 23px 14px; border: 1px solid #e7e3dc; border-radius: 7px; background: #fff; }
 .review-author { display: flex; align-items: center; gap: 11px; margin-bottom: 20px; }

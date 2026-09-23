@@ -15,10 +15,10 @@ export function Stars() {
   );
 }
 
-function ReviewCard({ review, onInteract }: { review: typeof reviews[number]; onInteract: () => void }) {
+function ReviewCard({ review, onInteract, ...rest }: { review: typeof reviews[number]; onInteract: () => void } & { 'aria-hidden'?: boolean }) {
   const [expanded, setExpanded] = useState(false);
   return (
-    <article className="review-card" dir="rtl">
+    <article className="review-card" dir="rtl" {...rest}>
       <div className="review-author">
         <span className="review-avatar" style={{ backgroundColor: review.color }} aria-hidden="true">{review.initial}</span>
         <div className="review-author-details"><h3 dir="auto">{review.name}</h3><p>{review.meta}</p></div>
@@ -36,7 +36,7 @@ function ReviewCard({ review, onInteract }: { review: typeof reviews[number]; on
 
 export default function ReviewCarousel() {
   const viewport = useRef<HTMLDivElement>(null);
-  const inView = useInView(viewport, { amount: 0.35 });
+  const inView = useInView(viewport, { amount: 0.1 });
   const reducedMotion = useReducedMotion();
   const [current, setCurrent] = useState(0);
   const [autoplay, setAutoplay] = useState(true);
@@ -66,14 +66,31 @@ export default function ReviewCarousel() {
   }, []);
 
   useEffect(() => {
-    if (!autoplay || hovered || focused || !inView || !metrics.step) return;
-    const timer = window.setInterval(() => {
-      if (document.hidden) return;
-      const next = current >= metrics.max ? 0 : current + 1;
-      viewport.current?.scrollTo({ left: -next * metrics.step, behavior: reducedMotion ? 'auto' : 'smooth' });
-    }, 6500);
-    return () => window.clearInterval(timer);
-  }, [autoplay, hovered, focused, inView, current, metrics, reducedMotion]);
+    if (!autoplay || hovered || focused || !inView || !metrics.step || reducedMotion) return;
+    const element = viewport.current;
+    if (!element) return;
+    const setWidth = reviews.length * metrics.step - (parseFloat(getComputedStyle(element).columnGap || '24'));
+    const speed = metrics.step / 3.5;
+    let raf = 0;
+    let last = performance.now();
+    const tick = (now: number) => {
+      const dt = Math.min(0.1, (now - last) / 1000);
+      last = now;
+      if (!document.hidden) {
+        let offset = Math.abs(element.scrollLeft) + speed * dt;
+        if (offset >= setWidth) {
+          offset -= setWidth;
+          element.scrollLeft = -offset;
+        } else {
+          element.scrollLeft = -offset;
+        }
+        setCurrent(Math.min(metrics.max, Math.round(offset / metrics.step)));
+      }
+      raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, [autoplay, hovered, focused, inView, metrics, reducedMotion]);
 
   function goTo(index: number) {
     setAutoplay(false);
@@ -89,10 +106,11 @@ export default function ReviewCarousel() {
         if (event.key === 'ArrowLeft') { event.preventDefault(); goTo(current + 1); }
         if (event.key === 'ArrowRight') { event.preventDefault(); goTo(current - 1); }
       }}>
-      <div className="reviews-viewport" ref={viewport} onPointerDown={() => setAutoplay(false)} onScroll={() => {
+      <div className={`reviews-viewport${autoplay && !reducedMotion ? ' is-gliding' : ''}`} ref={viewport} onPointerDown={() => setAutoplay(false)} onScroll={() => {
         if (viewport.current && metrics.step) setCurrent(Math.min(metrics.max, Math.max(0, Math.round(Math.abs(viewport.current.scrollLeft) / metrics.step))));
       }}>
         {reviews.map((review) => <ReviewCard key={review.name} review={review} onInteract={() => setAutoplay(false)} />)}
+        {reviews.map((review) => <ReviewCard key={`${review.name}-clone`} review={review} aria-hidden onInteract={() => setAutoplay(false)} />)}
       </div>
       <div className="carousel-controls">
         <button type="button" className="round-button" onClick={() => goTo(current - 1)} aria-label="التقييمات السابقة"><ChevronRight size={19} aria-hidden="true" /></button>
