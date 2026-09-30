@@ -9,7 +9,7 @@
 
 ## Booking
 
-All phone call links use the local Saudi format without a country code: `tel:0531842740` for branches and `tel:0501262512` for home services. Displayed phone numbers use the same local format. WhatsApp links retain their required international numbers, `966531842740` and `966501262512`, without a leading plus or local zero.
+All phone call links use the local Saudi format without a country code: `tel:0501262512` for branches and `tel:0502076285` for home services. Displayed phone numbers use the same local format. WhatsApp links retain their required international numbers, `966501262512` and `966502076285`, without a leading plus or local zero.
 
 Branch location cards offer phone booking only, plus their map/directions link. WhatsApp remains available in the package cards, hero, header, home-service section and three-button fixed booking dock.
 

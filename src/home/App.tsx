@@ -1426,10 +1426,7 @@ export default function App() {
         <div className="border-t border-white/10">
           <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-[11.5px] text-white/40 font-bold text-center">
             <span>© 2026 درة سبا — جميع الحقوق محفوظة</span>
-            <span>
-              خدمات مساج احترافية للرجال فقط • صور تعبيرية محتشمة متوافقة مع
-              سياسات الإعلان
-            </span>
+            <span>خدمات مساج احترافية للرجال فقط •</span>
           </div>
         </div>
       </footer>

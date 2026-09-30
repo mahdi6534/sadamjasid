@@ -1,8 +1,8 @@
 export const CONTACT = {
-  branches: "0531842740",
-  branchesDisplay: "0531842740",
-  home: "0501262512",
-  homeDisplay: "0501262512",
+  branches: "966501262512",
+  branchesDisplay: "0501262512",
+  home: "966502076285",
+  homeDisplay: "0502076285",
 } as const;
 
 export type Category = "massage" | "hammam" | "special" | "pedicure";
@@ -270,7 +270,11 @@ export function whatsappMessage(kind: "branches" | "home", service?: Service) {
 
 export function whatsappLink(kind: "branches" | "home", service?: Service) {
   // The official click-to-chat link handles both the app and WhatsApp Web.
-  return `https://wa.me/${CONTACT[kind]}?text=${encodeURIComponent(whatsappMessage(kind, service))}`;
+  const digits = CONTACT[kind].replace(/\D/g, "");
+  const international = digits.startsWith("0")
+    ? `966${digits.slice(1)}`
+    : digits;
+  return `https://wa.me/${international}?text=${encodeURIComponent(whatsappMessage(kind, service))}`;
 }
 
 export function branchWhatsappLink(phone: string, service?: Service) {
