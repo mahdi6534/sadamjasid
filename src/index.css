@@ -261,8 +261,8 @@ button:focus-visible, a:focus-visible, [tabindex="0"]:focus-visible { outline: 2
 .branch-map-link:focus-visible { outline-offset: -4px; }
 .map-open-hint { display: inline-flex; align-items: center; gap: 6px; min-height: 35px; padding: 7px 11px; background: rgb(255 253 247 / 96%); border: 1px solid #d0c1a4; border-radius: 4px; box-shadow: 0 2px 6px #0000000d; color: #6a5634; font-size: 11px; transition: background 200ms ease, border-color 200ms ease; }
 .branch-map-link:focus-visible .map-open-hint { background: #f2e6cf; border-color: #a88b56; }
-.branch-actions { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 10px 19px; }
-.branch-actions a { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; font-size: 12px; }
+.branch-actions { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 10px 19px; flex-wrap: wrap; }
+.branch-actions a { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 44px; font-size: 12px; flex: 1 1 0; min-width: 0; }
 .branch-directions { color: #8c754b; }
 .branch-whatsapp { color: #5a7d4f; padding-inline-start: 14px; border-inline-start: 1px solid #e5dfd2; font-weight: 500; }
 .branch-whatsapp svg { color: #3f6b46; }
@@ -532,8 +532,10 @@ button:focus-visible, a:focus-visible, [tabindex="0"]:focus-visible { outline: 2
   .branch-heading { padding: 18px 22px 15px; }
   .branch-heading h3 { font-size: 29px; }
   .branch-map { aspect-ratio: 1.7; }
-  .branch-actions { padding: 10px 20px; }
-  .branch-actions a { font-size: 13px; min-height: 44px; }
+  .branch-actions { padding: 10px 20px; flex-direction: column; align-items: stretch; }
+  .branch-actions a { width: 100%; flex: 1 1 auto; font-size: 13px; min-height: 44px; border-inline-start: none; padding-inline-start: 0; }
+  .branch-whatsapp, .branch-call { border-top: 1px solid #e5dfd2; padding-top: 8px; }
+  .branch-call { justify-content: center; }
   .map-open-hint { min-height: 40px; padding-inline: 13px; }
   .footer-main { gap: 32px 27px; padding-block: 44px 30px; }
   .footer-brand { display: flex; justify-content: space-between; align-items: center; gap: 18px; }
