@@ -34,9 +34,9 @@ import {
   Quote,
 } from "lucide-react";
 
-const PHONE_DISPLAY = "0501262512";
-const PHONE_LINK = "tel:0501262512";
-const WA_NUMBER = "966501262512";
+const PHONE_DISPLAY = "0502076285";
+const PHONE_LINK = "tel:0502076285";
+const WA_NUMBER = "966502076285";
 const FRESHA_LINK =
   "https://www.fresha.com/ar/a/dorh-spa-home-services-riyadh-home-business-dammam-rd-al-yarmuk-riyadh-13251-saudi-arabia-hbmh8w2q";
 const waLink = (msg: string) =>
