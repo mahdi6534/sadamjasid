@@ -335,7 +335,7 @@ function LandingPage() {
       </a>
       <header className="site-header" ref={header}>
         <div className="container header-inner">
-          <Brand compact />
+          <Brand compact name="Dorrat Almasaj Center" />
           <nav className="desktop-nav" aria-label="القائمة الرئيسية">
             {navItems.map((item) => (
               <a

@@ -1,6 +1,6 @@
 export const CONTACT = {
-  branches: "966501262512",
-  branchesDisplay: "0501262512",
+  branches: "966502076285",
+  branchesDisplay: "0502076285",
   home: "966502076285",
   homeDisplay: "0502076285",
 } as const;
