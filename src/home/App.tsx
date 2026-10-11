@@ -475,311 +475,6 @@ export default function App() {
         </div>
       </header>
 
-      {/* ===== HERO ===== */}
-      <section className="relative overflow-hidden sand-pattern islamic-pattern">
-        <div className="max-w-7xl mx-auto px-4 pt-8 pb-6 sm:pt-12 sm:pb-10">
-          <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-8 items-center">
-            <div>
-              <motion.div
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="inline-flex items-center gap-2 rounded-full bg-[#0f2340] text-white px-4 py-2 text-[12px] font-bold mb-4 shadow-lg"
-              >
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                درة سبا المنزلي • خدمة فروع درة المساج بالرياض
-              </motion.div>
-
-              <motion.h1
-                initial={{ opacity: 0, y: 22 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.05 }}
-                className="font-display text-[30px] leading-[1.3] sm:text-[44px] sm:leading-[1.25] text-[#0f2340]"
-              >
-                زحمة الطريق وتعب الدوام
-                <span className="block text-[#7c6a1e]">سحبوا طاقتك؟</span>
-                <span className="block mt-2 text-[21px] sm:text-[28px] font-extrabold text-[#1b2a44]">
-                  لا تطلع من بيتك.. جبنا{" "}
-                  <span className="gold-text">«السبا الفندقي»</span> لحد غرفتك!
-                </span>
-              </motion.h1>
-
-              <motion.p
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.15 }}
-                className="mt-4 text-[14.5px] sm:text-[15.5px] leading-8 text-[#3c4c64] max-w-2xl"
-              >
-                درة سبا المنزلي: نحن خدمة السبا المنزلية لفروع درة المساج
-                بالرياض — فهل تعرف من نحن؟ جودة فندقية فاخرة بأسعار تكسر
-                القاعدة.. وستلمس هذا الفرق وتراه بأم عينيك!
-              </motion.p>
-
-              <motion.div
-                initial={{ opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 }}
-                className="mt-5 grid grid-cols-3 max-w-xl rounded-2xl overflow-hidden border border-[#0f2340]/10 bg-white card-shadow"
-              >
-                {[
-                  { n: "+5", l: "فروع بالرياض", i: MapPin },
-                  { n: "+20K", l: "عميل يثق فينا", i: Users },
-                  { n: "+5000", l: "تقييم ذهبي بجوجل", i: Star },
-                ].map((s, k) => (
-                  <div
-                    key={k}
-                    className={`px-2 py-3 sm:py-4 text-center ${k !== 2 ? "border-l border-[#0f2340]/10" : ""}`}
-                  >
-                    <s.i className="w-4 h-4 mx-auto text-[#a97e3f] mb-1" />
-                    <div
-                      className="font-display text-lg sm:text-2xl text-[#0f2340] tabular-nums"
-                      dir="ltr"
-                    >
-                      {s.n}
-                    </div>
-                    <div className="text-[11px] sm:text-[12.5px] text-[#5b6b82] font-bold">
-                      {s.l}
-                    </div>
-                  </div>
-                ))}
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.25 }}
-                className="mt-5 flex flex-col sm:flex-row gap-3 max-w-xl"
-              >
-                <a
-                  href="#packages"
-                  className="flex-1 flex items-center justify-center gap-2 rounded-2xl bg-[#0f2340] text-white font-display text-[16px] py-4 shadow-xl hover:bg-[#16325e] transition"
-                >
-                  <Sparkles className="w-5 h-5 text-[#d9b64a]" /> شوف الباقات
-                  والخصومات
-                </a>
-                <a
-                  href={waLink("اهلا فريق درة سبا اريد حجز موعد منزلي")}
-                  className="flex-1 flex items-center justify-center gap-2 rounded-2xl bg-[#22c15e] text-white font-extrabold py-4 animate-wa"
-                >
-                  <WhatsIcon /> واتساب مباشر
-                </a>
-              </motion.div>
-
-              <div className="mt-4 flex flex-wrap items-center gap-2 text-[12px] font-bold text-[#3c4c64]">
-                <span className="flex items-center gap-1.5 rounded-full bg-white border border-[#0f2340]/10 px-3 py-1.5 card-shadow">
-                  <Lock className="w-3.5 h-3.5 text-[#3f7d6b]" /> خصوصية تامة
-                </span>
-                <span className="flex items-center gap-1.5 rounded-full bg-white border border-[#0f2340]/10 px-3 py-1.5 card-shadow">
-                  <Leaf className="w-3.5 h-3.5 text-[#3f7d6b]" /> منتجات طبيعية
-                </span>
-                <span className="flex items-center gap-1.5 rounded-full bg-white border border-[#0f2340]/10 px-3 py-1.5 card-shadow">
-                  <CreditCard className="w-3.5 h-3.5 text-[#3f7d6b]" /> قسّطها
-                  تابي وتمارا
-                </span>
-                <span className="flex items-center gap-1.5 rounded-full bg-[#0f2340] text-white px-3 py-1.5">
-                  ♂ للرجال فقط
-                </span>
-              </div>
-            </div>
-
-            {/* hero visual — Saudi client white thobe + ghutra, therapist official uniform */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.97 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.15 }}
-              className="relative"
-            >
-              <div className="relative bg-white p-3 rounded-[30px] border border-[#c9a227]/40 card-shadow-lg">
-                <div className="overflow-hidden arch-img border border-[#0f2340]/10">
-                  <ResponsiveImage
-                    src="/home/images/hero-white-thobe.jpg"
-                    alt="عميل سعودي بالثوب الأبيض والغترة يستقبل خدمة درة سبا المنزلية ببيته"
-                    className="h-[380px] sm:h-[480px] w-full object-cover"
-                    loading="eager"
-                    fetchPriority="high"
-                    sizes="(max-width: 640px) 340px, (max-width: 1024px) 50vw, 500px"
-                  />
-                </div>
-                <div className="absolute top-6 right-6 flex flex-col gap-2">
-                  <span className="rounded-full bg-white/95 backdrop-blur px-3 py-1.5 text-[12px] font-extrabold text-[#0f2340] border border-[#c9a227]/40 card-shadow flex items-center gap-1.5">
-                    <GoogleG className="w-4 h-4" /> 4.9 من 5000+ تقييم حقيقي
-                  </span>
-                  <span className="rounded-full bg-[#22c15e] px-3 py-1.5 text-[12px] font-extrabold text-white shadow-lg">
-                    متاح الآن بالرياض • 30-60 دقيقة
-                  </span>
-                </div>
-                <div className="absolute bottom-6 right-6 left-6 flex flex-col gap-2">
-                  <div className="rounded-2xl bg-[#0f2340]/94 backdrop-blur border border-[#c9a227]/40 p-4 flex items-center justify-between gap-3 text-white">
-                    <div>
-                      <div className="text-[11.5px] text-[#d9b64a] font-bold flex items-center gap-1">
-                        <Sofa className="w-3.5 h-3.5" /> لحد باب بيتك — يبدأ من
-                      </div>
-                      <div className="font-display text-3xl mt-0.5">
-                        199 <span className="text-sm font-bold">ر.س</span>
-                      </div>
-                    </div>
-                    <a
-                      href={PHONE_LINK}
-                      className="flex items-center gap-2 rounded-xl bg-[#d9b64a] text-[#0b1a30] px-4 py-3 font-extrabold text-sm hover:brightness-110"
-                    >
-                      <Phone className="w-4 h-4" />{" "}
-                      <span dir="ltr">{PHONE_DISPLAY}</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-2 text-[12px]">
-            <span className="text-[#5b6b82] font-bold">دفع مرن وآمن:</span>
-            {[
-              "تابي Tabby",
-              "تمارا Tamara",
-              "مدى",
-              "Visa",
-              "Apple Pay",
-              "حجز موثق Fresha",
-            ].map((p) => (
-              <span
-                key={p}
-                className="rounded-lg bg-white border border-[#0f2340]/10 px-3 py-1.5 font-bold text-[#0f2340]/75 card-shadow"
-              >
-                {p}
-              </span>
-            ))}
-          </div>
-        </div>
-
-        <div className="relative bg-[#0f2340] py-3 overflow-hidden" dir="ltr">
-          <div
-            className="flex gap-8 whitespace-nowrap animate-marquee w-max"
-            dir="rtl"
-          >
-            {[0, 1].map((r) => (
-              <div
-                key={r}
-                className="flex gap-8 text-[13px] font-bold text-[#e8d5a8]"
-              >
-                {[
-                  "مساج سويدي احترافي",
-                  "كاسات هواء",
-                  "أحجار دافئة",
-                  "حمام مغربي",
-                  "بديكير رجالي",
-                  "تنظيف بشرة",
-                  "جاكوزي أقدام",
-                  "نوصلك وين ما كنت 30-60 دقيقة",
-                  "أخصائيون رجال محترفون",
-                  "علبة استخدام واحد لكل عميل",
-                ].map((t) => (
-                  <span key={t + r} className="flex items-center gap-2">
-                    ✦ {t}
-                  </span>
-                ))}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ===== REAL GOOGLE REVIEWS ===== */}
-      <section
-        id="reviews"
-        className="bg-[#f1e9d9]/60 border-b border-[#0f2340]/10"
-      >
-        <div className="max-w-7xl mx-auto px-4 py-9 sm:py-12">
-          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-6">
-            <div>
-              <div className="inline-flex items-center gap-2 rounded-full bg-white border border-[#0f2340]/10 px-4 py-2 text-[12.5px] font-extrabold text-[#0f2340] card-shadow">
-                <GoogleG className="w-5 h-5" />
-                تقييمات حقيقية 100% من صفحة فروعنا على Google Maps
-                <BadgeCheck className="w-4 h-4 text-[#4285F4]" />
-              </div>
-              <h2 className="font-display text-[26px] sm:text-[36px] mt-3 text-[#0f2340]">
-                وش قالوا عنا <span className="gold-text">بجوجل؟</span> كلامهم..
-                مو كلامنا
-              </h2>
-              <p className="text-[#5b6b82] text-[13.5px] mt-1.5 font-bold">
-                نفس الأخصائيين الرجال اللي قيّموهم بالفروع — هم اللي يجونك لحد
-                باب بيتك بالخدمة المنزلية الاحترافية.
-              </p>
-            </div>
-            <div className="flex items-center gap-3 rounded-2xl bg-[#0f2340] text-white px-5 py-3.5 card-shadow shrink-0">
-              <GoogleG className="w-8 h-8 bg-white rounded-full p-1" />
-              <div>
-                <div className="flex items-center gap-1.5">
-                  <span className="font-display text-2xl">4.9</span>
-                  <span className="flex text-[#fbbc05]">
-                    {[0, 1, 2, 3, 4].map((i) => (
-                      <Star key={i} className="w-4 h-4 fill-current" />
-                    ))}
-                  </span>
-                </div>
-                <div className="text-[11.5px] text-white/70 font-bold">
-                  +5000 تقييم ذهبي موثق
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3.5">
-            {REVIEWS.map((r, i) => (
-              <motion.figure
-                key={i}
-                initial={{ opacity: 0, y: 18 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: (i % 3) * 0.07 }}
-                className="relative rounded-2xl bg-white border border-[#0f2340]/10 p-5 card-shadow hover:border-[#c9a227]/50 hover:-translate-y-1 transition-all"
-              >
-                <Quote className="absolute top-4 left-4 w-7 h-7 text-[#c9a227]/20" />
-                <figcaption className="flex items-center gap-3 mb-2.5">
-                  <span
-                    className={`w-11 h-11 rounded-full bg-gradient-to-br ${r.color} flex items-center justify-center font-display text-white text-lg shrink-0`}
-                  >
-                    {r.initial}
-                  </span>
-                  <span className="min-w-0">
-                    <span
-                      className="block font-extrabold text-[14px] text-[#0f2340] truncate"
-                      dir="auto"
-                    >
-                      {r.name}
-                    </span>
-                    <span className="block text-[11px] text-[#5b6b82] font-bold truncate">
-                      {r.meta}
-                    </span>
-                  </span>
-                  <GoogleG className="w-5 h-5 mr-auto shrink-0" />
-                </figcaption>
-                <div className="flex items-center gap-2 mb-2.5">
-                  <span className="flex text-[#fbbc05]">
-                    {[0, 1, 2, 3, 4].map((k) => (
-                      <Star key={k} className="w-4 h-4 fill-current" />
-                    ))}
-                  </span>
-                  <span className="text-[11px] text-[#5b6b82] font-bold">
-                    {r.time}
-                  </span>
-                  {r.isNew && (
-                    <span className="text-[10px] font-extrabold text-[#1a73e8] border border-[#1a73e8]/30 bg-[#1a73e8]/5 rounded-md px-1.5 py-0.5">
-                      جديد
-                    </span>
-                  )}
-                </div>
-                <blockquote className="text-[13px] leading-[1.95] text-[#2c3d57]">
-                  “{r.text}”
-                </blockquote>
-              </motion.figure>
-            ))}
-          </div>
-          <p className="mt-4 text-center text-[12px] text-[#5b6b82] font-bold">
-            لقطات نصية منشورة بإذن أصحابها من تقييمات Google — الأسماء والتواريخ
-            كما ظهرت تماماً.
-          </p>
-        </div>
-      </section>
-
       {/* ===== PACKAGES NAV ===== */}
       <div className="sticky top-[68px] z-30 bg-[#faf7f1]/94 backdrop-blur-xl border-b border-[#0f2340]/10">
         <div className="max-w-7xl mx-auto px-4 py-2.5 flex gap-2 overflow-x-auto scrollbar-hide">
@@ -802,6 +497,7 @@ export default function App() {
 
       {/* ===== PACKAGES ===== */}
       <section id="packages" className="max-w-7xl mx-auto px-4 py-9 sm:py-12">
+        {/* COMMENTED OUT per client request — packages intro (badge, heading, subtitle, kit box)
         <div className="text-center max-w-2xl mx-auto mb-8">
           <div className="inline-flex items-center gap-2 rounded-full bg-[#0f2340] text-white px-4 py-2 text-[12.5px] font-bold">
             <Crown className="w-4 h-4 text-[#d9b64a]" /> باقات درة سبا المنزلية
@@ -826,6 +522,7 @@ export default function App() {
           </div>
           <div className="tick-line mt-5 max-w-xs mx-auto" />
         </div>
+        */}
 
         <div className="space-y-6">
           {PACKAGES.map((p, idx) => {
@@ -1237,6 +934,311 @@ export default function App() {
           <p className="mt-4 text-center text-[12px] text-[#5b6b82] font-bold">
             📸 صور فريقنا وأدواتنا الحقيقية أرسلها العميل — والمعروض أعلاه توثيق
             مطابق لزيّنا وتجهيزنا الرسمي
+          </p>
+        </div>
+      </section>
+
+      {/* ===== HERO ===== */}
+      <section className="relative overflow-hidden sand-pattern islamic-pattern">
+        <div className="max-w-7xl mx-auto px-4 pt-8 pb-6 sm:pt-12 sm:pb-10">
+          <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-8 items-center">
+            <div>
+              <motion.div
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="inline-flex items-center gap-2 rounded-full bg-[#0f2340] text-white px-4 py-2 text-[12px] font-bold mb-4 shadow-lg"
+              >
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                درة سبا المنزلي • خدمة فروع درة المساج بالرياض
+              </motion.div>
+
+              <motion.h1
+                initial={{ opacity: 0, y: 22 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.05 }}
+                className="font-display text-[30px] leading-[1.3] sm:text-[44px] sm:leading-[1.25] text-[#0f2340]"
+              >
+                زحمة الطريق وتعب الدوام
+                <span className="block text-[#7c6a1e]">سحبوا طاقتك؟</span>
+                <span className="block mt-2 text-[21px] sm:text-[28px] font-extrabold text-[#1b2a44]">
+                  لا تطلع من بيتك.. جبنا{" "}
+                  <span className="gold-text">«السبا المنزلي»</span> لحد غرفتك!
+                </span>
+              </motion.h1>
+
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.15 }}
+                className="mt-4 text-[14.5px] sm:text-[15.5px] leading-8 text-[#3c4c64] max-w-2xl"
+              >
+                درة سبا المنزلي: نحن خدمة السبا المنزلية لفروع درة المساج
+                بالرياض — فهل تعرف من نحن؟ جودة فندقية فاخرة بأسعار تكسر
+                القاعدة.. وستلمس هذا الفرق وتراه بأم عينيك!
+              </motion.p>
+
+              <motion.div
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+                className="mt-5 grid grid-cols-3 max-w-xl rounded-2xl overflow-hidden border border-[#0f2340]/10 bg-white card-shadow"
+              >
+                {[
+                  { n: "+5", l: "فروع بالرياض", i: MapPin },
+                  { n: "+20K", l: "عميل يثق فينا", i: Users },
+                  { n: "+5000", l: "تقييم ذهبي بجوجل", i: Star },
+                ].map((s, k) => (
+                  <div
+                    key={k}
+                    className={`px-2 py-3 sm:py-4 text-center ${k !== 2 ? "border-l border-[#0f2340]/10" : ""}`}
+                  >
+                    <s.i className="w-4 h-4 mx-auto text-[#a97e3f] mb-1" />
+                    <div
+                      className="font-display text-lg sm:text-2xl text-[#0f2340] tabular-nums"
+                      dir="ltr"
+                    >
+                      {s.n}
+                    </div>
+                    <div className="text-[11px] sm:text-[12.5px] text-[#5b6b82] font-bold">
+                      {s.l}
+                    </div>
+                  </div>
+                ))}
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.25 }}
+                className="mt-5 flex flex-col sm:flex-row gap-3 max-w-xl"
+              >
+                <a
+                  href="#packages"
+                  className="flex-1 flex items-center justify-center gap-2 rounded-2xl bg-[#0f2340] text-white font-display text-[16px] py-4 shadow-xl hover:bg-[#16325e] transition"
+                >
+                  <Sparkles className="w-5 h-5 text-[#d9b64a]" /> شوف الباقات
+                  والخصومات
+                </a>
+                <a
+                  href={waLink("اهلا فريق درة سبا اريد حجز موعد منزلي")}
+                  className="flex-1 flex items-center justify-center gap-2 rounded-2xl bg-[#22c15e] text-white font-extrabold py-4 animate-wa"
+                >
+                  <WhatsIcon /> واتساب مباشر
+                </a>
+              </motion.div>
+
+              <div className="mt-4 flex flex-wrap items-center gap-2 text-[12px] font-bold text-[#3c4c64]">
+                <span className="flex items-center gap-1.5 rounded-full bg-white border border-[#0f2340]/10 px-3 py-1.5 card-shadow">
+                  <Lock className="w-3.5 h-3.5 text-[#3f7d6b]" /> خصوصية تامة
+                </span>
+                <span className="flex items-center gap-1.5 rounded-full bg-white border border-[#0f2340]/10 px-3 py-1.5 card-shadow">
+                  <Leaf className="w-3.5 h-3.5 text-[#3f7d6b]" /> منتجات طبيعية
+                </span>
+                <span className="flex items-center gap-1.5 rounded-full bg-white border border-[#0f2340]/10 px-3 py-1.5 card-shadow">
+                  <CreditCard className="w-3.5 h-3.5 text-[#3f7d6b]" /> قسّطها
+                  تابي وتمارا
+                </span>
+                <span className="flex items-center gap-1.5 rounded-full bg-[#0f2340] text-white px-3 py-1.5">
+                  ♂ للرجال فقط
+                </span>
+              </div>
+            </div>
+
+            {/* hero visual — Saudi client white thobe + ghutra, therapist official uniform */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.97 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.15 }}
+              className="relative"
+            >
+              <div className="relative bg-white p-3 rounded-[30px] border border-[#c9a227]/40 card-shadow-lg">
+                <div className="overflow-hidden arch-img border border-[#0f2340]/10">
+                  <ResponsiveImage
+                    src="/home/images/hero-white-thobe.jpg"
+                    alt="عميل سعودي بالثوب الأبيض والغترة يستقبل خدمة درة سبا المنزلية ببيته"
+                    className="h-[380px] sm:h-[480px] w-full object-cover"
+                    loading="eager"
+                    fetchPriority="high"
+                    sizes="(max-width: 640px) 340px, (max-width: 1024px) 50vw, 500px"
+                  />
+                </div>
+                <div className="absolute top-6 right-6 flex flex-col gap-2">
+                  <span className="rounded-full bg-white/95 backdrop-blur px-3 py-1.5 text-[12px] font-extrabold text-[#0f2340] border border-[#c9a227]/40 card-shadow flex items-center gap-1.5">
+                    <GoogleG className="w-4 h-4" /> 4.9 من 5000+ تقييم حقيقي
+                  </span>
+                  <span className="rounded-full bg-[#22c15e] px-3 py-1.5 text-[12px] font-extrabold text-white shadow-lg">
+                    متاح الآن بالرياض • 30-60 دقيقة
+                  </span>
+                </div>
+                <div className="absolute bottom-6 right-6 left-6 flex flex-col gap-2">
+                  <div className="rounded-2xl bg-[#0f2340]/94 backdrop-blur border border-[#c9a227]/40 p-4 flex items-center justify-between gap-3 text-white">
+                    <div>
+                      <div className="text-[11.5px] text-[#d9b64a] font-bold flex items-center gap-1">
+                        <Sofa className="w-3.5 h-3.5" /> لحد باب بيتك — يبدأ من
+                      </div>
+                      <div className="font-display text-3xl mt-0.5">
+                        199 <span className="text-sm font-bold">ر.س</span>
+                      </div>
+                    </div>
+                    <a
+                      href={PHONE_LINK}
+                      className="flex items-center gap-2 rounded-xl bg-[#d9b64a] text-[#0b1a30] px-4 py-3 font-extrabold text-sm hover:brightness-110"
+                    >
+                      <Phone className="w-4 h-4" />{" "}
+                      <span dir="ltr">{PHONE_DISPLAY}</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-2 text-[12px]">
+            <span className="text-[#5b6b82] font-bold">دفع مرن وآمن:</span>
+            {[
+              "تابي Tabby",
+              "تمارا Tamara",
+              "مدى",
+              "Visa",
+              "Apple Pay",
+              "حجز موثق Fresha",
+            ].map((p) => (
+              <span
+                key={p}
+                className="rounded-lg bg-white border border-[#0f2340]/10 px-3 py-1.5 font-bold text-[#0f2340]/75 card-shadow"
+              >
+                {p}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <div className="relative bg-[#0f2340] py-3 overflow-hidden" dir="ltr">
+          <div
+            className="flex gap-8 whitespace-nowrap animate-marquee w-max"
+            dir="rtl"
+          >
+            {[0, 1].map((r) => (
+              <div
+                key={r}
+                className="flex gap-8 text-[13px] font-bold text-[#e8d5a8]"
+              >
+                {[
+                  "مساج سويدي احترافي",
+                  "كاسات هواء",
+                  "أحجار دافئة",
+                  "حمام مغربي",
+                  "بديكير رجالي",
+                  "تنظيف بشرة",
+                  "جاكوزي أقدام",
+                  "نوصلك وين ما كنت 30-60 دقيقة",
+                  "أخصائيون رجال محترفون",
+                  "علبة استخدام واحد لكل عميل",
+                ].map((t) => (
+                  <span key={t + r} className="flex items-center gap-2">
+                    ✦ {t}
+                  </span>
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ===== REAL GOOGLE REVIEWS ===== */}
+      <section
+        id="reviews"
+        className="bg-[#f1e9d9]/60 border-b border-[#0f2340]/10"
+      >
+        <div className="max-w-7xl mx-auto px-4 py-9 sm:py-12">
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-6">
+            <div>
+              <div className="inline-flex items-center gap-2 rounded-full bg-white border border-[#0f2340]/10 px-4 py-2 text-[12.5px] font-extrabold text-[#0f2340] card-shadow">
+                <GoogleG className="w-5 h-5" />
+                تقييمات حقيقية 100% من صفحة فروعنا على Google Maps
+                <BadgeCheck className="w-4 h-4 text-[#4285F4]" />
+              </div>
+              <h2 className="font-display text-[26px] sm:text-[36px] mt-3 text-[#0f2340]">
+                وش قالوا عنا <span className="gold-text">بجوجل؟</span> كلامهم..
+                مو كلامنا
+              </h2>
+              <p className="text-[#5b6b82] text-[13.5px] mt-1.5 font-bold">
+                نفس الأخصائيين الرجال اللي قيّموهم بالفروع — هم اللي يجونك لحد
+                باب بيتك بالخدمة المنزلية الاحترافية.
+              </p>
+            </div>
+            <div className="flex items-center gap-3 rounded-2xl bg-[#0f2340] text-white px-5 py-3.5 card-shadow shrink-0">
+              <GoogleG className="w-8 h-8 bg-white rounded-full p-1" />
+              <div>
+                <div className="flex items-center gap-1.5">
+                  <span className="font-display text-2xl">4.9</span>
+                  <span className="flex text-[#fbbc05]">
+                    {[0, 1, 2, 3, 4].map((i) => (
+                      <Star key={i} className="w-4 h-4 fill-current" />
+                    ))}
+                  </span>
+                </div>
+                <div className="text-[11.5px] text-white/70 font-bold">
+                  +5000 تقييم ذهبي موثق
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3.5">
+            {REVIEWS.map((r, i) => (
+              <motion.figure
+                key={i}
+                initial={{ opacity: 0, y: 18 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: (i % 3) * 0.07 }}
+                className="relative rounded-2xl bg-white border border-[#0f2340]/10 p-5 card-shadow hover:border-[#c9a227]/50 hover:-translate-y-1 transition-all"
+              >
+                <Quote className="absolute top-4 left-4 w-7 h-7 text-[#c9a227]/20" />
+                <figcaption className="flex items-center gap-3 mb-2.5">
+                  <span
+                    className={`w-11 h-11 rounded-full bg-gradient-to-br ${r.color} flex items-center justify-center font-display text-white text-lg shrink-0`}
+                  >
+                    {r.initial}
+                  </span>
+                  <span className="min-w-0">
+                    <span
+                      className="block font-extrabold text-[14px] text-[#0f2340] truncate"
+                      dir="auto"
+                    >
+                      {r.name}
+                    </span>
+                    <span className="block text-[11px] text-[#5b6b82] font-bold truncate">
+                      {r.meta}
+                    </span>
+                  </span>
+                  <GoogleG className="w-5 h-5 mr-auto shrink-0" />
+                </figcaption>
+                <div className="flex items-center gap-2 mb-2.5">
+                  <span className="flex text-[#fbbc05]">
+                    {[0, 1, 2, 3, 4].map((k) => (
+                      <Star key={k} className="w-4 h-4 fill-current" />
+                    ))}
+                  </span>
+                  <span className="text-[11px] text-[#5b6b82] font-bold">
+                    {r.time}
+                  </span>
+                  {r.isNew && (
+                    <span className="text-[10px] font-extrabold text-[#1a73e8] border border-[#1a73e8]/30 bg-[#1a73e8]/5 rounded-md px-1.5 py-0.5">
+                      جديد
+                    </span>
+                  )}
+                </div>
+                <blockquote className="text-[13px] leading-[1.95] text-[#2c3d57]">
+                  “{r.text}”
+                </blockquote>
+              </motion.figure>
+            ))}
+          </div>
+          <p className="mt-4 text-center text-[12px] text-[#5b6b82] font-bold">
+            لقطات نصية منشورة بإذن أصحابها من تقييمات Google — الأسماء والتواريخ
+            كما ظهرت تماماً.
           </p>
         </div>
       </section>
