@@ -18,6 +18,8 @@ export interface Service {
   popular?: boolean;
   ribbon?: string;
   includes: string[];
+  priceBefore?: number;
+  priceAfter?: number;
 }
 
 export const categories: { id: Category; name: string }[] = [
@@ -38,6 +40,8 @@ export const services: Service[] = [
     ribbon: "120 ألف طلب خلال عام",
     description: "افصل عن زحمة يومك بساعة من الراحة الشاملة.",
     image: "/images/المساج الملكي الشامل ساعه.webp",
+    priceBefore: 280,
+    priceAfter: 140,
     includes: [
       "جلسة مساج ملكي شامل لمدة ساعة",
       "تدليك كامل الجسم للمساعدة على تخفيف الشد والاسترخاء",
@@ -51,6 +55,8 @@ export const services: Service[] = [
     vip: true,
     description: "ساعتان من الاسترخاء لتخفيف الشد وإراحة جسمك.",
     image: "/images/المساج الملكي الشامل 2 ساعه.webp",
+    priceBefore: 500,
+    priceAfter: 250,
     includes: [
       "جلسة مساج ملكي شامل لمدة ساعتين",
       "تدليك الجسم والتركيز على مناطق الشد حسب احتياجك",
@@ -63,6 +69,8 @@ export const services: Service[] = [
     duration: "ساعة ونصف",
     description: "وقت أطول لعضلات مرتاحة وذهن أصفى.",
     image: "/images/المساج الملكي الشامل ساعه ونصف.webp",
+    priceBefore: 400,
+    priceAfter: 200,
     includes: [
       "جلسة مساج ملكي شامل لمدة ساعة ونصف",
       "تدليك الجسم للمساعدة على الاسترخاء وتخفيف التوتر العضلي",
@@ -74,6 +82,8 @@ export const services: Service[] = [
     name: "المساج التايلندي",
     description: "تمدد وضغط مدروس لمرونة أفضل وعضلات أخف.",
     image: "/images/مساج تايلندي.webp",
+    priceBefore: 250,
+    priceAfter: 125,
     includes: [
       "تقنيات تدليك تايلندي تجمع الضغط والتمدد",
       "تكييف شدة الجلسة مع راحتك، بالتنسيق مع الأخصائي",
@@ -85,6 +95,8 @@ export const services: Service[] = [
     name: "مساج الأحجار الساخنة",
     description: "دفء الأحجار يساعد على إرخاء العضلات المشدودة.",
     image: "/images/مساج الاحجار الساخنه.webp",
+    priceBefore: 240,
+    priceAfter: 120,
     includes: [
       "تدليك باستخدام أحجار ملساء دافئة",
       "دفء وضغط لطيف للمساعدة على استرخاء العضلات",
@@ -96,6 +108,8 @@ export const services: Service[] = [
     name: "مساج رفلكسلوجي",
     description: "عناية بنقاط القدمين لراحة بعد طول الوقوف.",
     image: "/images/مساج رفلكسولجي.webp",
+    priceBefore: 240,
+    priceAfter: 120,
     includes: [
       "ضغط مدروس على نقاط القدمين",
       "جلسة تركز على الراحة والاسترخاء بعد إجهاد اليوم",
@@ -107,6 +121,8 @@ export const services: Service[] = [
     name: "مساج الشياتسو",
     description: "ضغط إيقاعي بالأصابع يهدئ التوتر وشد الجسم.",
     image: "/images/مساج الشياتسو.webp",
+    priceBefore: 220,
+    priceAfter: 110,
     includes: [
       "تدليك بتقنيات الضغط الإيقاعي بالأصابع",
       "التركيز على الاسترخاء وتخفيف التوتر العضلي",
@@ -119,6 +135,8 @@ export const services: Service[] = [
     vip: true,
     description: "تنظيف وتقشير شامل، مع عناية بالوجه والشعر.",
     image: "/images/الحمام المغربي الملكي الشامل.webp",
+    priceBefore: 300,
+    priceAfter: 150,
     includes: [
       "الصابون البلدي والأعشاب المغربية الطبيعية",
       "طين البحر الميت المعدني وصنفرة الجسم",
@@ -133,6 +151,8 @@ export const services: Service[] = [
     name: "حمام صنفرة الجسم",
     description: "صابون بلدي وتقشير كامل لبشرة أنعم وأنظف.",
     image: "/images/حمام صنفرة الجسم.webp",
+    priceBefore: 250,
+    priceAfter: 125,
     includes: [
       "تنظيف الجسم بالصابون البلدي المغربي",
       "صنفرة كاملة لإزالة الجلد الميت وتنعيم البشرة",
@@ -144,6 +164,8 @@ export const services: Service[] = [
     name: "حمام طين البحر الميت",
     description: "صابون مغربي وطين معدني لنظافة وانتعاش البشرة.",
     image: "/images/حمام طين البحر الميت.webp",
+    priceBefore: 250,
+    priceAfter: 125,
     includes: [
       "تنظيف الجسم بالصابون البلدي المغربي",
       "طين البحر الميت المعدني على كامل الجسم",
@@ -155,6 +177,8 @@ export const services: Service[] = [
     name: "حمام الأعشاب المغربية",
     description: "أعشاب طبيعية وصابون بلدي لانتعاش معطر.",
     image: "/images/حمام الأعشاب المغربية.webp",
+    priceBefore: 250,
+    priceAfter: 125,
     includes: [
       "تنظيف بالصابون المغربي الطبيعي",
       "خليط أعشاب مغربية مثل الورد والخزامى والريحان مع الغسول",
@@ -166,6 +190,8 @@ export const services: Service[] = [
     name: "الحمام المغربي بالصابون البلدي",
     description: "بخار وصابون بلدي لتنظيف البشرة وإزالة الجلد الميت.",
     image: "/images/الحمام المغربي بالصابون البلدي.webp",
+    priceBefore: 200,
+    priceAfter: 100,
     includes: [
       "تهيئة الجسم في غرفة البخار",
       "تنظيف كامل الجسم بالصابون البلدي المغربي",
@@ -178,6 +204,8 @@ export const services: Service[] = [
     vip: true,
     description: "مساج وبودي كير وحمام مغربي وجاكوزي ليومك الكبير.",
     image: "/images/الباقة الملكية الخاصة للعرسان.webp",
+    priceBefore: 800,
+    priceAfter: 400,
     includes: [
       "مساج ملكي شامل",
       "بودي كير للعناية بالجسم",
@@ -192,6 +220,8 @@ export const services: Service[] = [
     vip: true,
     description: "راحة لعضلاتك ونظافة لبشرتك في تجربة واحدة.",
     image: "/images/المساج الملكي والحمام الملكي.webp",
+    priceBefore: 500,
+    priceAfter: 250,
     includes: ["المساج الملكي VIP", "الحمام المغربي الملكي VIP"],
   },
   {
@@ -201,6 +231,8 @@ export const services: Service[] = [
     vip: true,
     description: "مساج شامل مع عناية مرتبة لليدين والقدمين.",
     image: "/images/المساج الملكي والبديكير.webp",
+    priceBefore: 500,
+    priceAfter: 250,
     includes: ["المساج الملكي VIP", "بديكير اليدين والقدمين"],
   },
   {
@@ -209,6 +241,8 @@ export const services: Service[] = [
     name: "المساج التايلندي + الحمام المغربي",
     description: "مرونة واسترخاء، مع حمام أعشاب أو طين معدني.",
     image: "/images/المساج التايلندي والحمام المغربي.webp",
+    priceBefore: 450,
+    priceAfter: 225,
     includes: [
       "جلسة مساج تايلندي",
       "اختيارك من حمام الأعشاب المغربية أو حمام طين البحر الميت",
@@ -222,6 +256,8 @@ export const services: Service[] = [
     description:
       "دلل نفسك بأظافر صحية وجميلة، في درة المساج أفضل مركز مساج في الرياض.",
     image: "/images/بدكير اليدين والقدمين.webp",
+    priceBefore: 280,
+    priceAfter: 140,
     includes: [
       "تقديم خدمة تقليم الأظافر بأعلى جودة",
       "باستخدام أفضل الأدوات والتقنيات في جميع فروع درة المساج",
@@ -234,6 +270,8 @@ export const services: Service[] = [
     name: "بدكير القدمين",
     description: "قص اظافر وسنفرة وتقشير الجلد الميت.",
     image: "/images/بدكير القدمين.webp",
+    priceBefore: 200,
+    priceAfter: 100,
     includes: [
       "قص أظافر القدمين",
       "سنفرة وتقشير الجلد الميت",
@@ -246,6 +284,8 @@ export const services: Service[] = [
     name: "بدكير اليدين",
     description: "تقليم اظافر الايدي وسنفرتها وتنظيفه.",
     image: "/images/بدكير اليدين.webp",
+    priceBefore: 140,
+    priceAfter: 70,
     includes: ["تقليم أظافر اليدين", "سنفرة وتنظيف الأظافر", "إزالة التشققات"],
   },
   {
@@ -255,6 +295,8 @@ export const services: Service[] = [
     description:
       "استمتع بتجربة استرخاء لا مثيل لها مع أفضل جاكوزي في الرياض. دلل نفسك بتجربة استرخاء مميزة في جميع فروع درة المساج في الرياض مع خدمة الجاكوزي الفاخرة.",
     image: "/images/جاكوزي.webp",
+    priceBefore: 120,
+    priceAfter: 60,
     includes: [
       "تجربة استرخاء مميزة في جميع فروع درة المساج في الرياض",
       "خدمة الجاكوزي الفاخرة",

@@ -21,7 +21,7 @@ import {
   Sparkles,
   X,
 } from "lucide-react";
-import { Brand, GoogleIcon, WhatsAppIcon } from "./components/Brand";
+import { Brand, GoogleIcon, RiyalMark, WhatsAppIcon } from "./components/Brand";
 import DelayedCallPrompt from "./components/DelayedCallPrompt";
 import ReviewCarousel from "./components/ReviewCarousel";
 import {
@@ -164,6 +164,22 @@ function ServiceCard({ service }: { service: Service }) {
               </li>
             ))}
           </ul>
+          {service.priceBefore != null && service.priceAfter != null && (
+            <div className="package-price">
+              <span className="package-price-now">
+                <strong>{service.priceAfter}</strong>
+                <RiyalMark className="riyal-mark" />
+              </span>
+              <s className="package-price-was">
+                {service.priceBefore}
+                <RiyalMark className="riyal-mark" />
+              </s>
+              <span className="package-price-save">
+                وفّر {service.priceBefore - service.priceAfter}
+                <RiyalMark className="riyal-mark" />
+              </span>
+            </div>
+          )}
           <BookingActions variant="package" service={service} />
           <p className="booking-note">
             السعر والموعد وتوفر الباقة للمنزلي لدى فريق الحجز.
