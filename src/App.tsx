@@ -67,6 +67,7 @@ function BookingActions({
   service?: Service;
 }) {
   const title = service ? serviceTitle(service) : "جلسة مساج";
+  const homeToPage = variant === "package" || variant === "dock";
   return (
     <div className={`booking-actions booking-actions-${variant}`}>
       <a
@@ -89,12 +90,16 @@ function BookingActions({
       </a>
       <a
         className="button button-home"
-        href={whatsappLink("home", service)}
-        target="_blank"
-        rel="noopener noreferrer"
+        href={homeToPage ? "/home" : whatsappLink("home", service)}
+        target={homeToPage ? undefined : "_blank"}
+        rel={homeToPage ? undefined : "noopener noreferrer"}
         aria-label={`واتساب الخدمات والعروض المنزلية${service ? `، استفسر عن ${title}` : ""}`}
       >
-        <WhatsAppIcon size={20} />
+        {homeToPage ? (
+          <House size={19} aria-hidden="true" />
+        ) : (
+          <WhatsAppIcon size={20} />
+        )}
         <span>العروض المنزلية</span>
       </a>
     </div>

@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
-import { Phone, X } from 'lucide-react';
+import { House, Phone, X } from 'lucide-react';
 import { CONTACT, whatsappLink } from '../data';
 import { WhatsAppIcon } from './Brand';
 
@@ -86,8 +86,8 @@ export default function DelayedCallPrompt() {
               <a className="button button-gold" href={`tel:${CONTACT.branchesDisplay}`} aria-label={`اتصل بالفروع على ${CONTACT.branchesDisplay}`}>
                 <Phone size={17} aria-hidden="true" />اتصل بالفروع
               </a>
-              <a className="button button-home" href={whatsappLink('home')} target="_blank" rel="noopener noreferrer" aria-label="الخدمات والعروض المنزلية عبر واتساب">
-                <WhatsAppIcon size={17} />الخدمات والعروض المنزلية
+              <a className="button button-home" href="/home" aria-label="الخدمات والعروض المنزلية عبر واتساب">
+                <House size={17} aria-hidden="true" />الخدمات والعروض المنزلية
               </a>
             </div>
           </motion.aside>
