@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <rect width="500" height="500" fill="#000000" rx="60" />
+  <!-- Stone 1 (Top Pebble / Egg) -->
+  <path d="M250 115 C222 115 210 152 212 176 C214 196 228 206 250 206 C272 206 286 196 288 176 C290 152 278 115 250 115 Z" fill="#BA8D6D" />
+  <!-- Stone 2 (Upper Middle Oval Pebble) -->
+  <path d="M165 258 C150 236 180 214 246 211 C318 208 350 228 345 254 C340 279 280 293 212 289 C177 287 167 269 165 258 Z" fill="#BA8D6D" />
+  <!-- Stone 3 (Lower Middle Tilted Pebble) -->
+  <path d="M198 328 C184 311 207 294 264 296 C314 298 334 313 330 334 C324 356 284 366 240 363 C208 361 200 340 198 328 Z" fill="#BA8D6D" />
+  <!-- Stone 4 (Base Broad Pebble) -->
+  <path d="M128 408 C115 384 144 364 198 362 C226 361 250 370 284 372 C328 375 366 365 382 384 C402 404 375 428 322 433 C258 438 206 435 154 430 C132 428 123 418 128 408 Z" fill="#BA8D6D" />
+</svg>

@@ -19,6 +19,9 @@ export default defineConfig({
           if (req.url === "/home") {
             req.url = "/home/";
           }
+          if (req.url === "/gifts") {
+            req.url = "/gifts/";
+          }
           next();
         });
       },
@@ -34,6 +37,7 @@ export default defineConfig({
       input: {
         main: path.resolve(__dirname, "index.html"),
         home: path.resolve(__dirname, "home/index.html"),
+        gifts: path.resolve(__dirname, "gifts/index.html"),
       },
     },
   },

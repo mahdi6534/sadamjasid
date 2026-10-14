@@ -1,0 +1,149 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Hacen Tunisia";
+  src:
+    url("https://arbfonts.com//wp-content/fonts/misc//Hacen-Tunisia-Lt.ttf") format("truetype"),
+    url("https://db.onlinewebfonts.com/t/2c18a8d6f191a998e58e175c321f9d5e.woff2") format("woff2"),
+    url("https://db.onlinewebfonts.com/t/2c18a8d6f191a998e58e175c321f9d5e.woff") format("woff"),
+    url("https://db.onlinewebfonts.com/t/2c18a8d6f191a998e58e175c321f9d5e.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-sans: "Hacen Tunisia", "Hacen-Tunisia", "Hacen Tunisia Lt", "Tajawal", "Segoe UI", system-ui, -apple-system, sans-serif;
+
+  --color-cream: #fbf6ed;
+  --color-sand: #f5ecdb;
+  --color-linen: #eee1cb;
+  --color-rose: #b76e79;
+  --color-rosedeep: #95525f;
+  --color-rosesoft: #f7e6e1;
+  --color-blush: #eecfc6;
+  --color-gold: #bf9a4e;
+  --color-golddeep: #a37f35;
+  --color-goldsoft: #f2e6c9;
+  --color-olive: #71804f;
+  --color-olivedeep: #4c5a34;
+  --color-olivesoft: #e7ecd4;
+  --color-ink: #38322a;
+  --color-cocoa: #6f5b45;
+  --color-wa: #1faa55;
+  --color-wadeep: #178a43;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--color-rose);
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-sand);
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--color-olive), var(--color-rose));
+  border-radius: 99px;
+  border: 2px solid var(--color-sand);
+}
+
+/* ---------- keyframes ---------- */
+@keyframes floaty {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+@keyframes floaty-soft {
+  0%, 100% { transform: translateY(0) rotate(-1deg); }
+  50% { transform: translateY(-6px) rotate(1deg); }
+}
+@keyframes marquee-x {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 rgba(31, 170, 85, 0.45); }
+  70% { box-shadow: 0 0 0 16px rgba(31, 170, 85, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(31, 170, 85, 0); }
+}
+@keyframes shimmer {
+  from { background-position: 200% center; }
+  to { background-position: -200% center; }
+}
+
+@layer utilities {
+  .animate-floaty { animation: floaty 6s ease-in-out infinite; }
+  .animate-floaty-soft { animation: floaty-soft 7s ease-in-out infinite; }
+  .animate-marquee { animation: marquee-x 32s linear infinite; }
+  .animate-pulse-ring { animation: pulse-ring 2.2s ease-out infinite; }
+
+  .text-shimmer-gold {
+    background: linear-gradient(110deg, #a37f35 20%, #e9cf8f 40%, #bf9a4e 55%, #a37f35 75%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shimmer 5s linear infinite;
+  }
+
+  .hero-pattern {
+    background-image:
+      radial-gradient(ellipse 60% 50% at 85% -10%, rgba(183, 110, 121, 0.18), transparent 60%),
+      radial-gradient(ellipse 55% 45% at 8% 0%, rgba(113, 128, 79, 0.18), transparent 60%),
+      radial-gradient(ellipse 40% 35% at 50% 110%, rgba(191, 154, 78, 0.12), transparent 65%);
+  }
+
+  .dots-pattern {
+    background-image: radial-gradient(rgba(111, 91, 69, 0.16) 1.2px, transparent 1.2px);
+    background-size: 18px 18px;
+  }
+
+  .card-sheen {
+    position: relative;
+    overflow: hidden;
+  }
+  .card-sheen::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(115deg, transparent 30%, rgba(255, 255, 255, 0.35) 48%, transparent 62%);
+    transform: translateX(120%);
+    transition: transform 0.9s ease;
+    pointer-events: none;
+  }
+  .card-sheen:hover::after {
+    transform: translateX(-120%);
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { transition: none; opacity: 1; transform: none; }
+  .animate-floaty, .animate-floaty-soft, .animate-marquee, .animate-pulse-ring { animation: none; }
+  html { scroll-behavior: auto; }
+}
