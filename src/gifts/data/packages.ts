@@ -24,7 +24,7 @@ export interface SpaPackage {
 
 export const waLink = (pkgName: string, recipient: "والدي" | "زوجي" | "أخوي") =>
   `${WHATSAPP_BASE}?text=${encodeURIComponent(
-    `مرحباً درة سبا، أود إهداء «${pkgName}» لـ${recipient} مع خدمة الوصول الخاص بخصوصية تامة. ممكن تفاصيل الحجز؟`
+    `مرحباً درة سبا، أود إهداء «${pkgName}» لـ${recipient} مع خدمة الوصول الخاص بخصوصية تامة. ممكن تفاصيل الحجز؟`,
   )}`;
 
 export const waGeneral = (who?: "father" | "husband" | "brother") => {
@@ -62,7 +62,7 @@ export const fatherPackages: SpaPackage[] = [
     id: "lamsa",
     name: "باقة لمسة",
     tagline: "عناية فائقة تليق به.. من الرأس حتى أطراف القدمين",
-    image: "/gifts/images/elderly-saudi-footbath.jpg",
+    image: "/gifts/images/test.jpeg",
     services: [
       { label: "مساج سيجنتشر علاجي لفكّ عضلات الظهر" },
       { label: "بديكير علاجي خفيف لليدين والقدمين" },
@@ -133,7 +133,8 @@ export const husbandPackages: SpaPackage[] = [
   {
     id: "vip",
     name: "باقة درة سبا VIP",
-    tagline: "الهدية الأسطورية لذكرى الزواج والمناسبات الكبرى — 3 ساعات دلال ملكي",
+    tagline:
+      "الهدية الأسطورية لذكرى الزواج والمناسبات الكبرى — 3 ساعات دلال ملكي",
     image: "/gifts/images/vip.jpg",
     services: [
       { label: "مساج VIP فاخر وشامل (90 دقيقة)" },
@@ -273,7 +274,8 @@ export const brotherPackages: SpaPackage[] = [
   {
     id: "brother-abhar",
     name: "باقة تعب الأبهر والكتفين",
-    tagline: "حل جذري لآلام الأبهر الناتجة عن الجلوس الطويل والقيادة واستخدام الجوال",
+    tagline:
+      "حل جذري لآلام الأبهر الناتجة عن الجلوس الطويل والقيادة واستخدام الجوال",
     image:
       "https://images.pexels.com/photos/8312866/pexels-photo-8312866.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
     services: [
@@ -308,7 +310,8 @@ export const brotherPackages: SpaPackage[] = [
   {
     id: "brother-vip",
     name: "باقة درة سبا VIP للشباب",
-    tagline: "الهدية الأرقى بمناسبة التخرج، الترقية، أو تجهيز الأخ قبل زواجه ومناسباته",
+    tagline:
+      "الهدية الأرقى بمناسبة التخرج، الترقية، أو تجهيز الأخ قبل زواجه ومناسباته",
     image: "/gifts/images/vip.jpg",
     services: [
       { label: "مساج VIP فاخر وشامل (90 دقيقة)" },
