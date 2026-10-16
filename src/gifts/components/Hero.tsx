@@ -141,8 +141,8 @@ export default function Hero() {
             />
             <div className="relative overflow-hidden rounded-[2.2rem] shadow-2xl shadow-cocoa/30 ring-1 ring-white/60">
               <img
-                src="/gifts/images/hero.jpg"
-                alt="أخصائي إندونيسي بزي رسمي يقدم جلسة مساج استرخائية لرجل سعودي في منزله"
+                src="/gifts/images/gift-poster.webp"
+                alt="باقات سبا منزلية فاخرة للزوج والأب والأخ — اهدي من تحبين راحة لا تُنسى"
                 className="aspect-[4/3.3] w-full object-cover"
                 loading="eager"
               />

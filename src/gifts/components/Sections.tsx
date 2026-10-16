@@ -259,8 +259,8 @@ export function FatherSection() {
             <div className="grid items-center gap-5 md:grid-cols-[380px_1fr]">
               <div className="relative overflow-hidden rounded-2xl shadow-sm">
                 <img
-                  src="/gifts/images/elderly-saudi-footbath.jpg"
-                  alt="أب سعودي مسن بثوب أبيض أنيق يستمتع بجلسة عناية واسترخاء في منزله"
+                  src="/gifts/images/father-smiling.webp"
+                  alt="أب سعودي مسن مبتسم بثوب أبيض أنيق يسترخي في منزله بعد جلسة العناية"
                   className="aspect-[4/3] w-full object-cover"
                   loading="lazy"
                 />
@@ -381,8 +381,8 @@ export function HusbandSection() {
             <div className="grid items-center gap-5 md:grid-cols-[380px_1fr]">
               <div className="relative overflow-hidden rounded-2xl shadow-sm">
                 <img
-                  src="/gifts/images/saudi-man-massage.jpg"
-                  alt="زوج سعودي يسترخي أثناء جلسة مساج على أيدي خبير إندونيسي يرتدي قفازات"
+                  src="/gifts/images/thank-you-husband.webp"
+                  alt="زوج سعودي يقبّل رأس زوجته تعبيراً عن امتنانه بعد إهدائها له جلسة استرخاء"
                   className="aspect-[4/3] w-full object-cover"
                   loading="lazy"
                 />
@@ -495,8 +495,8 @@ export function BrotherSection() {
             <div className="grid items-center gap-5 md:grid-cols-[380px_1fr]">
               <div className="relative overflow-hidden rounded-2xl shadow-sm">
                 <img
-                  src="/gifts/images/thai-stretch-massage.jpg"
-                  alt="شاب سعودي يستمتع بجلسة مساج وإطالة عضلية في منزله"
+                  src="/gifts/images/brother-and-sister.webp"
+                  alt="شاب سعودي يحتضن أخته ويقبّل رأسها امتناناً بعد إهدائها له جلسة استرخاء"
                   className="aspect-[4/3] w-full object-cover"
                   loading="lazy"
                 />
