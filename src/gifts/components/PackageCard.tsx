@@ -9,7 +9,6 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import {
-  discountPct,
   fmt,
   FRESHA_URL,
   PHONE_INTL,
@@ -80,7 +79,6 @@ export default function PackageCard({
   featured?: boolean;
 }) {
   const a = accentStyles[accent];
-  const pct = discountPct(pkg);
 
   return (
     <Reveal
@@ -102,22 +100,19 @@ export default function PackageCard({
         />
         <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/20 to-transparent" />
 
-        {/* Discount badge top-left */}
-        <div className="absolute left-3.5 top-3.5 flex flex-col items-start gap-1.5">
-          <span className="rounded-full bg-gradient-to-l from-golddeep to-gold px-3 py-1 text-xs font-black text-white shadow-md shadow-gold/40">
-            وفّري {pct}٪
-          </span>
-          {pkg.duration && (
+        {/* Duration badge top-left */}
+        {pkg.duration && (
+          <div className="absolute left-3.5 top-3.5">
             <span className="flex items-center gap-1 rounded-full bg-ink/85 px-2.5 py-1 text-[11px] font-black text-cream backdrop-blur">
               <Clock3 className="h-3 w-3 text-gold" />
               {pkg.duration}
             </span>
-          )}
-        </div>
+          </div>
+        )}
 
-        {/* Badge top-right */}
+        {/* Badge bottom-left */}
         {pkg.badge && (
-          <div className="absolute right-3.5 top-3.5">
+          <div className="absolute bottom-3.5 left-3.5">
             <span
               className={cn(
                 "inline-block rounded-full bg-gradient-to-l px-3 py-1 text-[11px] font-black text-white shadow-md",

@@ -148,38 +148,41 @@ export default function Hero() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-ink/40 via-transparent to-transparent" />
 
-              {/* Rating badge */}
-              <div className="animate-floaty-soft absolute right-3.5 top-3.5 rounded-2xl bg-white/92 px-3.5 py-2.5 shadow-xl backdrop-blur">
-                <div className="flex items-center gap-1" dir="ltr">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-3.5 w-3.5 fill-gold text-gold" />
-                  ))}
-                </div>
-                <p className="mt-0.5 text-xs font-black text-ink">
-                  4.9 من تقييمات عميلاتنا
-                </p>
-              </div>
-
-              {/* Free Gifts Callout */}
-              <div className="animate-floaty absolute bottom-3.5 left-3.5 right-3.5 flex items-center justify-between gap-3 rounded-2xl bg-white/92 px-4 py-3 shadow-xl backdrop-blur sm:left-auto sm:min-w-[260px]">
-                <div>
-                  <p className="text-sm font-black text-ink">مع كل باقة هدية</p>
-                  <p className="mt-0.5 text-xs font-bold text-cocoa">
-                    جاكوزي أقدام + ضيافة شاي أعشاب
-                    <span className="mr-1.5 rounded-md bg-wa px-1.5 py-0.5 text-[10px] font-black text-white">
-                      مجاناً
+              {/* Bottom float: free gifts + rating combined */}
+              <div className="absolute bottom-3.5 left-3.5 right-3.5 flex">
+                <div className="animate-floaty-soft ms-auto flex w-fit max-w-full items-center rounded-2xl bg-white/92 shadow-xl backdrop-blur sm:ms-0">
+                  {/* Free gifts */}
+                  <div className="flex items-center gap-2 px-3 py-2 sm:gap-2.5 sm:pe-3 sm:ps-4 sm:py-3">
+                    <span className="hidden h-9 w-9 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-rose to-rosedeep text-white shadow-md shadow-rose/40 sm:grid">
+                      <Sparkles className="h-4 w-4" />
                     </span>
-                  </p>
-                </div>
-                <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-rose to-rosedeep text-white shadow-md shadow-rose/40">
-                  <Sparkles className="h-5 w-5" />
-                </span>
-              </div>
-            </div>
+                    <div>
+                      <p className="hidden text-sm font-black text-ink sm:block">مع كل باقة هدية</p>
+                      <p className="text-[11px] font-bold text-cocoa sm:mt-0.5 sm:text-xs">
+                        جاكوزي أقدام + ضيافة شاي أعشاب
+                        <span className="mr-1.5 rounded-md bg-wa px-1.5 py-0.5 text-[10px] font-black text-white">
+                          مجاناً
+                        </span>
+                      </p>
+                    </div>
+                  </div>
 
-            {/* Discount Ribbon */}
-            <div className="absolute -left-2 top-8 -rotate-6 rounded-xl bg-gradient-to-l from-golddeep to-gold px-3.5 py-1.5 text-xs font-black text-white shadow-lg shadow-gold/40 sm:-left-3">
-              خصومات حصرية حتى 51%
+                  {/* Divider */}
+                  <div className="my-2 w-0 self-stretch border-s border-ink/10 sm:my-3" />
+
+                  {/* Rating */}
+                  <div className="flex items-center gap-1.5 px-3 py-2 sm:gap-2 sm:pe-4 sm:ps-3 sm:py-3">
+                    <div className="flex shrink-0 items-center gap-0.5" dir="ltr">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="h-3 w-3 fill-gold text-gold sm:h-3.5 sm:w-3.5" />
+                      ))}
+                    </div>
+                    <p className="text-[11px] font-black text-ink sm:text-xs">
+                      4.9<span className="hidden sm:inline"> من تقييمات عميلاتنا</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </Reveal>
         </div>
