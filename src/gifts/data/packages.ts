@@ -1,5 +1,5 @@
 export const PHONE_DISPLAY = "0502076285";
-export const PHONE_INTL = "+966502076285";
+export const PHONE_INTL = "0502076285";
 export const WHATSAPP_BASE = "https://wa.me/966502076285";
 export const FRESHA_URL =
   "https://www.fresha.com/ar/a/dorh-spa-home-services-riyadh-home-business-dammam-rd-al-yarmuk-riyadh-13251-saudi-arabia-hbmh8w2q";
