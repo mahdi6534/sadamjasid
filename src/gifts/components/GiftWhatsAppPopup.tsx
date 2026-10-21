@@ -29,9 +29,6 @@ export default function GiftWhatsAppPopup() {
   const [activeTab, setActiveTab] = useState<"husband" | "father" | "brother">("husband");
 
   useEffect(() => {
-    // Check if previously dismissed in this session
-    const dismissed = sessionStorage.getItem("dorh_popup_dismissed");
-
     // Check if query param ?popup=true or hash #popup is present (for instant testing/preview)
     const urlParams = new URLSearchParams(window.location.search);
     const forceShow =
@@ -41,8 +38,6 @@ export default function GiftWhatsAppPopup() {
       setIsOpen(true);
       return;
     }
-
-    if (dismissed) return;
 
     // Trigger after exactly 2 minutes (120,000 milliseconds)
     const timer = setTimeout(() => {
@@ -54,7 +49,6 @@ export default function GiftWhatsAppPopup() {
 
   const handleClose = () => {
     setIsOpen(false);
-    sessionStorage.setItem("dorh_popup_dismissed", "true");
   };
 
   if (!isOpen) {
