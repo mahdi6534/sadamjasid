@@ -22,7 +22,7 @@ import {
   X,
 } from "lucide-react";
 import { Brand, GoogleIcon, RiyalMark, WhatsAppIcon } from "./components/Brand";
-import DelayedCallPrompt from "./components/DelayedCallPrompt";
+// import DelayedCallPrompt from "./components/DelayedCallPrompt";
 import ReviewCarousel from "./components/ReviewCarousel";
 import {
   branches,
@@ -717,7 +717,7 @@ function LandingPage() {
           <BookingActions variant="dock" />
         </div>
       </nav>
-      <DelayedCallPrompt />
+      {/* <DelayedCallPrompt /> */}
     </div>
   );
 }
