@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: "Almarai", "Cairo", system-ui, -apple-system, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    background-color: #faf7f1;
+    color: #1b2a44;
+    font-family: "Almarai", "Cairo", system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: #0f2340;
+    color: #faf7f1;
+  }
+}
+
+.font-display {
+  font-family: "Cairo", "Almarai", sans-serif;
+  font-weight: 800;
+}
+
+.font-display-black {
+  font-family: "Cairo", "Almarai", sans-serif;
+  font-weight: 900;
+}
+
+.gold-text {
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(
+      120deg,
+      #8a6a24,
+      #c9a227 30%,
+      #a97e3f 55%,
+      #d9b64a 75%,
+      #8a6a24
+    )
+    0 0 / 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.sand-pattern {
+  background-image:
+    radial-gradient(circle at 15% 10%, rgba(201, 162, 39, 0.09) 0%, transparent 45%),
+    radial-gradient(circle at 85% 80%, rgba(184, 115, 51, 0.07) 0%, transparent 45%),
+    repeating-linear-gradient(
+      -45deg,
+      transparent 0px,
+      transparent 16px,
+      rgba(15, 35, 64, 0.018) 16px,
+      rgba(15, 35, 64, 0.018) 17px
+    );
+}
+
+.card-shadow {
+  box-shadow: 0 16px 42px -18px rgba(15, 35, 64, 0.16);
+}
+
+.card-shadow-lg {
+  box-shadow: 0 28px 64px -20px rgba(15, 35, 64, 0.28);
+}
+
+.card-shadow-vip {
+  box-shadow: 0 24px 56px -18px rgba(15, 35, 64, 0.24);
+}
+
+.copper-warm-strip {
+  background: linear-gradient(135deg, #fdf6ec 0%, #f9ebd6 55%, #f5e2c6 100%);
+}
+
+.gold-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(169, 126, 63, 0.45), transparent);
+}

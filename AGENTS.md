@@ -6,8 +6,10 @@ Arabic-first (RTL) marketing site for the Riyadh massage/spa brand "درة ال�
 - `/` → `index.html` → `src/main.tsx` → `src/App.tsx` — main center landing. Styling is mostly hand-written CSS in `src/index.css`, not Tailwind utilities.
 - `/home/` → `home/index.html` → `src/home/main.tsx` → `src/home/App.tsx` — home-service landing. Tailwind utilities + `src/home/index.css`.
 - `/gifts/` → `gifts/index.html` → `src/gifts/main.tsx` → `src/gifts/App.tsx` — gift packages. Tailwind utilities + `src/gifts/index.css`.
-- The three pages are self-contained: separate components, CSS entries, and even duplicated `cn` helpers (`src/utils/cn.ts`, `src/home/utils/cn.ts`, `src/gifts/utils/cn.ts`). Only share code across the trees if a change really requires it.
-- The dev-only middleware in `vite.config.ts` rewrites `/home` and `/gifts` to trailing-slash paths; production relies on the built directory `index.html` files.
+- `/home-winter/` → `home-winter/index.html` → `src/home-winter/main.tsx` → `src/home-winter/App.tsx` — winter redesign of the home-service landing (single-page, own Tailwind `src/home-winter/index.css`, images in `public/home-winter/images/`).
+- The four pages are self-contained: separate components, CSS entries, and even duplicated `cn` helpers (`src/utils/cn.ts`, `src/home/utils/cn.ts`, `src/gifts/utils/cn.ts`, `src/home-winter/utils/cn.ts`). Only share code across the trees if a change really requires it.
+- The dev-only middleware in `vite.config.ts` rewrites `/home`, `/gifts`, and `/home-winter` to trailing-slash paths; production relies on the built directory `index.html` files.
+- Canonical/OG URLs all use `https://durtalmsaj.sa`; root sitemap at `public/sitemap.xml` lists `/`, `/home/`, `/gifts/`, `/home-winter/`.
 
 ## Commands
 - `npm run dev` / `npm run build` / `npm run preview`. Use npm: `node_modules` was installed by npm (`node_modules/.package-lock.json`), though `pnpm-lock.yaml` is also tracked — don't casually delete either lockfile.
@@ -22,7 +24,7 @@ Arabic-first (RTL) marketing site for the Riyadh massage/spa brand "درة ال�
 - Main-page package/service data lives in `src/data.ts`; review source data is the root-level `reviews.json`, imported by `src/components/ReviewCarousel.tsx`. Don't fabricate figures: unverified prices, dates, and totals were deliberately omitted.
 
 ## Page-specific gotchas
-- Timed overlays differ per page: main shows a call prompt after 35 s (`src/components/DelayedCallPrompt.tsx`); home opens a WhatsApp modal 90 s after mount (`src/home/App.tsx`); gifts opens a gift popup after 120 s, forceable for testing with `?popup=true` or `#popup` (`src/gifts/components/GiftWhatsAppPopup.tsx`, dismissal stored in sessionStorage).
+- Timed overlays differ per page: main shows a call prompt after 35 s (`src/components/DelayedCallPrompt.tsx`); gifts opens a gift popup after 120 s, forceable for testing with `?popup=true` or `#popup` (`src/gifts/components/GiftWhatsAppPopup.tsx`, dismissal stored in sessionStorage). Home and home-winter have no timed overlay — their WhatsApp CTAs are plain `wa.me` links (sticky bar + floating button).
 - Animation imports differ per page: main uses `motion/react`, home uses `framer-motion` (both v13, same library). Match the page you're editing.
 - Gifts fonts load from external CDNs (`arbfonts.com`, `db.onlinewebfonts.com`, Google Fonts), declared in both `gifts/index.html` and `src/gifts/index.css`.
-- SEO host mismatch: `home/index.html` canonical/OG use `https://dorra-spa.com`, while `public/home/robots.txt` and `public/home/sitemap.xml` reference `https://dorhspa.sa`; those two files also sit under `public/home/`, so they are served at `/home/...`, not the site root. Confirm the real domain before "fixing" either.
+- SEO: all pages use `https://durtalmsaj.sa` in canonical/OG/Twitter tags with absolute image URLs and trailing-slash paths; root `public/sitemap.xml` and `public/robots.txt` serve the four pages. The old `public/home/sitemap.xml` and `public/home/robots.txt` are served at `/home/...` (not root) and are kept in sync manually.
