@@ -56,4 +56,4 @@ Disallow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://dorhspa.sa/sitemap.xml
+Sitemap: https://durtalmsaj.sa/sitemap.xml
